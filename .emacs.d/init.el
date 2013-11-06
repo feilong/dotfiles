@@ -16,9 +16,10 @@
 (require 'whitespace)
 (require 'dired-x)
 (require 'compile)
-(ido-mode t)
+;(ido-mode t)
 (menu-bar-mode -1)
-(normal-erase-is-backspace-mode 1)
+;; mfl: the following line would mess up my backspace key 
+; (normal-erase-is-backspace-mode 1)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (setq column-number-mode t)
@@ -75,3 +76,17 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+;; -------------------------------
+;; -- Python Mode configuration --
+;; -------------------------------
+(load "python-config.el")
+
+;; -------------------------
+;; -- other configuration --
+;; -------------------------
+(set-keyboard-coding-system nil) ;; disable OSX option key symbols
+(load-theme 'color-theme-mfl t) ;; http://jasonm23.github.io/emacs-theme-editor/
+; (require 'color-theme)
+; (load "color-theme-mfl.el")
+; (color-theme-mfl)
