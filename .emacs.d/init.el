@@ -82,6 +82,11 @@
 ;; -------------------------------
 (load "python-config.el")
 
+;; ----------------------------
+;; -- Org Mode configuration --
+;; ----------------------------
+(load "org-config.el")
+
 ;; -------------------------
 ;; -- other configuration --
 ;; -------------------------
@@ -100,3 +105,5 @@
         (comment-or-uncomment-region beg end)
         (next-line)))
 (global-set-key "\C-c;" 'comment-or-uncomment-region-or-line)
+;; Visual line mode
+(global-visual-line-mode 1)
