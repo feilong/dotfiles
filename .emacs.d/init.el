@@ -62,7 +62,7 @@
 (global-set-key "\M-o" 'other-window)
 (global-set-key "\M-i" 'back-window)
 (global-set-key "\C-z" 'zap-to-char)
-(global-set-key "\C-h" 'backward-delete-char)
+; (global-set-key "\C-h" 'backward-delete-char)
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)
 (global-set-key "\M-u" 'zap-to-char)
@@ -87,6 +87,11 @@
 ;; ----------------------------
 (load "org-config.el")
 
+;; -----------------------------
+;; -- HTML Mode configuration --
+;; -----------------------------
+(load "html-config.el")
+
 ;; -------------------------
 ;; -- other configuration --
 ;; -------------------------
@@ -105,5 +110,15 @@
         (comment-or-uncomment-region beg end)
         (next-line)))
 (global-set-key "\C-c;" 'comment-or-uncomment-region-or-line)
+
 ;; Visual line mode
 (global-visual-line-mode 1)
+
+;; Font Family
+; http://stackoverflow.com/questions/5795451/how-to-detect-that-emacs-is-in-terminal-mode
+; http://blog.csdn.net/ccat/article/details/5286648
+(if window-system
+    (progn
+      (set-frame-font "Monaco-12")
+      (set-fontset-font "fontset-default" 'han '("SimHei"))
+      (setq face-font-rescale-alist '(("SimHei" . 1.2)))))
