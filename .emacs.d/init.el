@@ -122,3 +122,15 @@
       (set-frame-font "Monaco-12")
       (set-fontset-font "fontset-default" 'han '("SimHei"))
       (setq face-font-rescale-alist '(("SimHei" . 1.2)))))
+
+;; Package Management with package.el
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+;; EIN -- Emacs IPython Notebook
+;(require 'ein)
+
+;; kivy-mode
+(require 'kivy-mode)
+(add-to-list 'auto-mode-alist '("\\.kv$" . kivy-mode))
