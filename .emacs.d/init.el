@@ -134,3 +134,6 @@
 ;; kivy-mode
 (require 'kivy-mode)
 (add-to-list 'auto-mode-alist '("\\.kv$" . kivy-mode))
+
+;; Octave-Mode
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
