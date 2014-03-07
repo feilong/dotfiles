@@ -16,5 +16,6 @@
   '(font-lock-variable-name-face ((t (:foreground "#ffa624"))))
   '(minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
   '(font-lock-warning-face ((t (:foreground "red" :bold t))))
+  '(org-block-background ((t (:background "#3f3f3f"))))
 )
 (provide-theme 'color-theme-mfl)

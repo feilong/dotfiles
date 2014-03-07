@@ -5,3 +5,4 @@
    (sh . t)
   )
 )
+(setq org-src-fontify-natively t)
