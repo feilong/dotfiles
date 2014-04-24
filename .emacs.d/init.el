@@ -137,3 +137,31 @@
 
 ;; Octave-Mode
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+(add-hook 'octave-mode-hook '(lambda ()
+  (local-set-key (kbd "RET") 'newline-and-indent)))
+(setq octave-block-offset 4)
+(setq standard-indent 4)
+(setq-default indent-tabs-mode nil)
+;; (add-hook 'octave-mode-hook
+          ;; (lambda() (setq indent-line-function 'insert-tab)))
+
+;; Backup Files
+(setq backup-directory-alist `(("." . "~/.saves")))
+
+;; Tabs to spaces
+;; (setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+;; (global-set-key (kbd "TAB") 'indent-for-tab-command)
+(setq tab-stop-list '(4 8 12 16 20 24 28 32))
+;; (customize-variable (quote tab-stop-list))
+;; (custom-set-variables
+ ;; '(indent-line-function 'insert-tab)
+ ;; '(indent-tabs-mode t)
+ ;; '(tab-width 4))
+
+;; Unicode Encoding
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
